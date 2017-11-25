@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#B93E1F</color>
+    <color name="colorPrimaryDark">#B92412</color>
+    <color name="colorAccent">#B93E1F</color>
+
+    <color name="fb_login">#416BC1</color>
+    <color name="google_login">#5F5F5F</color>
+</resources>
