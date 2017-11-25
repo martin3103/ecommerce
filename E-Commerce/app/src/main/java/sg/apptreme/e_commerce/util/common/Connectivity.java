@@ -10,7 +10,7 @@ import android.telephony.TelephonyManager;
  *
  * @author emil http://stackoverflow.com/users/220710/emil
  */
-public class BeruangConnectivity {
+public class Connectivity {
 
     /**
      * Get the network info
@@ -31,7 +31,7 @@ public class BeruangConnectivity {
      * @param_context
      */
     public static boolean isConnected(Context context) {
-        NetworkInfo info = BeruangConnectivity.getNetworkInfo(context);
+        NetworkInfo info = Connectivity.getNetworkInfo(context);
         return (info != null && info.isConnected());
     }
 
@@ -42,7 +42,7 @@ public class BeruangConnectivity {
      * @param_context
      */
     public static boolean isConnectedWifi(Context context) {
-        NetworkInfo info = BeruangConnectivity.getNetworkInfo(context);
+        NetworkInfo info = Connectivity.getNetworkInfo(context);
         return (info != null && info.isConnected() && info.getType() == ConnectivityManager.TYPE_WIFI);
     }
 
@@ -53,7 +53,7 @@ public class BeruangConnectivity {
      * @param_context
      */
     public static boolean isConnectedMobile(Context context) {
-        NetworkInfo info = BeruangConnectivity.getNetworkInfo(context);
+        NetworkInfo info = Connectivity.getNetworkInfo(context);
         return (info != null && info.isConnected() && info.getType() == ConnectivityManager.TYPE_MOBILE);
     }
 
@@ -64,8 +64,8 @@ public class BeruangConnectivity {
      * @param_context
      */
     public static boolean isConnectedFast(Context context) {
-        NetworkInfo info = BeruangConnectivity.getNetworkInfo(context);
-        return (info != null && info.isConnected() && BeruangConnectivity
+        NetworkInfo info = Connectivity.getNetworkInfo(context);
+        return (info != null && info.isConnected() && Connectivity
                 .isConnectionFast(info.getType(), info.getSubtype()));
     }
 

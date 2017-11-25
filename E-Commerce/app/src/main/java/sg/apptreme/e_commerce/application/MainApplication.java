@@ -4,8 +4,7 @@ import android.app.Application;
 
 import com.crashlytics.android.Crashlytics;
 import com.crashlytics.android.answers.Answers;
-import com.facebook.FacebookSdk;
-import com.facebook.appevents.AppEventsLogger;
+
 import io.fabric.sdk.android.Fabric;
 
 /**
@@ -18,8 +17,5 @@ public class MainApplication extends Application {
     public void onCreate() {
         super.onCreate();
         Fabric.with(this, new Answers(), new Crashlytics());
-
-        FacebookSdk.sdkInitialize(getApplicationContext());
-        AppEventsLogger.activateApp(this);
     }
 }

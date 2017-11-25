@@ -3,7 +3,6 @@
 buildscript {
     repositories {
         maven {
-            url "https://oss.sonatype.org/content/repositories/snapshots/"
             url "https://maven.google.com"
         }
         maven { url "http://dl.bintray.com/populov/maven" }
@@ -23,7 +22,6 @@ buildscript {
 allprojects {
     repositories {
         maven {
-            url "https://oss.sonatype.org/content/repositories/snapshots/"
             url "https://maven.google.com"
         }
         maven { url "http://dl.bintray.com/populov/maven" }

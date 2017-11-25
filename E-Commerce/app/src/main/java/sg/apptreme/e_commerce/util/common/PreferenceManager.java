@@ -3,28 +3,28 @@ package sg.apptreme.e_commerce.util.common;
 import android.content.Context;
 import android.content.SharedPreferences;
 
-import com.fusion_payments.beruang.util.common.sqlite.SqliteManager;
-import com.fusion_payments.beruang.util.common.sqlite.model.SqlitePreference;
+import sg.apptreme.e_commerce.util.common.sqlite.SqliteManager;
+import sg.apptreme.e_commerce.util.common.sqlite.model.SqlitePreference;
 
 /**
  * Created by martinluternainggolan on 9/13/16.
  */
-public class BeruangPreferenceManager {
-    private static final String TAG = "BeruangPreferenceManager";
+public class PreferenceManager {
+    private static final String TAG = "PreferenceManager";
 
     private static final String AUTH_TOKEN = "auth_token";
     private static final String SAVE_TIME = "save_time";
-    private static BeruangPreferenceManager instance;
+    private static PreferenceManager instance;
     private static SqliteManager sqLiteManager;
 
     /**
      * Returns singleton class instance
      */
-    public static BeruangPreferenceManager getInstance() {
+    public static PreferenceManager getInstance() {
         if (instance == null) {
-            synchronized (BeruangPreferenceManager.class) {
+            synchronized (PreferenceManager.class) {
                 if (instance == null) {
-                    instance = new BeruangPreferenceManager();
+                    instance = new PreferenceManager();
                 }
             }
         }
@@ -190,7 +190,7 @@ public class BeruangPreferenceManager {
     }
 
     public static void saveAuthToken(Context context, String authToken) {
-        BeruangPreferenceManager.saveAsString(context, AUTH_TOKEN, authToken);
+        PreferenceManager.saveAsString(context, AUTH_TOKEN, authToken);
     }
 
     public static String getAuthToken(Context context) {

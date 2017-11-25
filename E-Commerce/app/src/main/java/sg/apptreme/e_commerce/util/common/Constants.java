@@ -3,7 +3,7 @@ package sg.apptreme.e_commerce.util.common;
 /**
  * Created by martinluternainggolan on 9/13/16.
  */
-public class BeruangConstants {
+public class Constants {
 
     /* Save on sqlite */
     public static String BERUANG_AUTH_TOKEN_USER_LOGIN = "beruang_auth_token_user_login";

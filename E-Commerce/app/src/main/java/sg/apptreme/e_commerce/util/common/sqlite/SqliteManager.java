@@ -8,10 +8,11 @@ import android.database.sqlite.SQLiteOpenHelper;
 import android.util.Log;
 
 import com.crashlytics.android.Crashlytics;
-import com.fusion_payments.beruang.util.common.sqlite.model.SqlitePreference;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import sg.apptreme.e_commerce.util.common.sqlite.model.SqlitePreference;
 
 /**
  * Created by martinluternainggolan on 9/13/16.
