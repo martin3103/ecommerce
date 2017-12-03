@@ -10,9 +10,8 @@ import sg.apptreme.e_commerce.util.common.sqlite.model.SqlitePreference;
  * Created by martinluternainggolan on 9/13/16.
  */
 public class PreferenceManager {
-    private static final String TAG = "PreferenceManager";
+    private final String TAG = getClass().getName();
 
-    private static final String AUTH_TOKEN = "auth_token";
     private static final String SAVE_TIME = "save_time";
     private static PreferenceManager instance;
     private static SqliteManager sqLiteManager;
@@ -49,7 +48,7 @@ public class PreferenceManager {
         if (context == null || key == null || key.isEmpty()) {
             return false;
         }
-        if (key.startsWith("beruang_")) {
+        if (key.startsWith("apptreme_")) {
             if (sqLiteManager == null) {
                 sqLiteManager = new SqliteManager(context);
             }
@@ -105,7 +104,7 @@ public class PreferenceManager {
         if (context == null || key == null || key.isEmpty()) {
             return null;
         }
-        if (key.startsWith("beruang_")) {
+        if (key.startsWith("apptreme_")) {
             if (sqLiteManager == null) {
                 sqLiteManager = new SqliteManager(context);
             }
@@ -135,7 +134,7 @@ public class PreferenceManager {
             return null;
         }
 
-        if (key.startsWith("beruang_")) {
+        if (key.startsWith("apptreme_")) {
             if (sqLiteManager == null) {
                 sqLiteManager = new SqliteManager(context);
             }
@@ -172,7 +171,7 @@ public class PreferenceManager {
         if (context == null || key == null || key.isEmpty()) {
             return false;
         }
-        if (key.startsWith("beruang_")) {
+        if (key.startsWith("apptreme_")) {
             if (sqLiteManager == null) {
                 sqLiteManager = new SqliteManager(context);
             }
@@ -188,14 +187,4 @@ public class PreferenceManager {
         editor.remove(key);
         return editor.commit();
     }
-
-    public static void saveAuthToken(Context context, String authToken) {
-        PreferenceManager.saveAsString(context, AUTH_TOKEN, authToken);
-    }
-
-    public static String getAuthToken(Context context) {
-        SharedPreferences prefs = android.preference.PreferenceManager.getDefaultSharedPreferences(context);
-        return prefs.getString(AUTH_TOKEN, null);
-    }
-
 }

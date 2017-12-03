@@ -13,12 +13,12 @@ import java.io.File;
  * Created by martinluternainggolan on 11/24/16.
  */
 
-public class Configuration {
+public class UIConfiguration {
     public Activity activity;
     public File myPath;
     public String fileName;
 
-    public Configuration(Activity activity) {
+    public UIConfiguration(Activity activity) {
         this.activity = activity;
     }
 
